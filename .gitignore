@@ -2,3 +2,7 @@
 __pycache__/
 copy_vqgan/
 useless/
+/data
+*.csv
+*.zip
+.vscode
