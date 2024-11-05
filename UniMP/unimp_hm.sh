@@ -1,10 +1,11 @@
-lr=$1
-bsz=$2
-modelname=$3
-subset=$4
-gamma=$5
-nsteps=$6
-accelerate launch --config_file accelerate_configs/accelerate_config_zero2.yaml --main_process_port 59999 mmrec.py \
+lr=0.001
+bsz=16
+modelname="4b"
+subset="hm"
+gamma=2
+nsteps=1
+
+python mmrec.py \
 --pretrained_model_name_or_path=${modelname} \
 --dataset_resampled \
 --mmrec_path="../data/${subset}/" \
